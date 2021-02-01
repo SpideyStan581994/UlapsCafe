@@ -42,6 +42,7 @@ xmlns:th="http://www.thymeleaf.org">
                         <th scope="col">#</th>
                         <th scope="col">Cafe</th>
                         <th scope="col">Price</th>
+                        <th scope="col"> Sugar Level </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -49,6 +50,7 @@ xmlns:th="http://www.thymeleaf.org">
                         <th scope="row" th:text="${counter.index + 1}">1</th>
                         <td th:text="${coffees.name}">Mark</td>
                         <td th:text="${'$ ' + coffees.price}">Otto</td>
+                        <td th:text="${coffees.sugarLevel}">Sugar lvel</td>
                     </tr>
                     </tbody>
                 </table>

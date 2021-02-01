@@ -34,6 +34,7 @@ public class IndexController {
     public String addCoffee(Model model){
         Coffee myCoffee = new Coffee();
         model.addAttribute("coffee",myCoffee);
+        model.addAttribute("sugarTypes",coffeeService.getAllSugartypes());
         return "addCoffee";
     }
 

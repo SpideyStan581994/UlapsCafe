@@ -39,6 +39,16 @@ xmlns:th="http://www.thymeleaf.org">
                         <label for="formControlPrice" class="form-label">Price</label>
                         <input type="number" class="form-control" id="formControlPrice" placeholder="Enter Price" th:field="*{price}" >
                     </div>
+
+                    <div class="mb-3">
+                        <label for="formControlSugar" class="form-label">Sugar Level</label>
+                        <select th:field="*{sugarLevel}" id ="formControlSugar" >
+                            <option th:each="sugar : ${sugarTypes}"
+                                    th:value="${sugar}"
+                                    th:text="${sugar}"></option>
+                        </select>
+                    </div>
+
                     <button type="submit" class="btn btn-primary mb-3">Add Coffee</button>
                 </div>
             </form>
