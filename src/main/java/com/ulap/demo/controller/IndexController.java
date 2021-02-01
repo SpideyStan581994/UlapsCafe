@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 @RequestMapping({"/index","/"})
 public class IndexController {
@@ -22,7 +24,9 @@ public class IndexController {
     }
 
     @GetMapping
-    public String showIndex(){
+    public String showIndex(Model model){
+        List<Coffee> coffees = coffeeService.showAllCoffee();
+        model.addAttribute("coffeeList",coffees);
         return "index";
     }
 
